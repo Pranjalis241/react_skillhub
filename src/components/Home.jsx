@@ -14,6 +14,13 @@ const Home = () => {
     return (
         <div className="container mt-4">
         
+
+     <h2 className="text-center fw-bold display-6 my-4 text-decoration-underline pt-2" 
+    style={{ fontFamily: "'Poppins', sans-serif", letterSpacing: "1px" }}>
+    Most Searched Courses
+</h2>
+
+
             <div className="row" style={{ fontFamily: "'Lora', serif"}}>
                 {/* Card 1 */}
                 <div className="col-md-4">

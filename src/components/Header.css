@@ -1,46 +1,111 @@
+/* Header Container */
+.header-container {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+ 
+
+  overflow: hidden;
+}
+
+/* Overlay Effect */
+.overlay {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px 0;
+  border-radius: 10px;
+}
+
+/* Heading Styles */
 .heading {
-    font-size: 2.5em;
-    text-align: center;
-    color: #333; /* Default color for the text */
-    margin-top: 40px;
-    font-family: 'Lora', serif;
-    margin-bottom: 50px;
-    
-  }
-  .back{
+  font-size: 2.8em;
+  color: #333;
+  font-family: "Lora", serif;
   
- background-color: rgb(181, 253, 199);
- background-color: rgb(211, 248, 243);
-/* Creates the square pattern by defining the size of the gradient */
+  margin-bottom: 29px;
+}
 
-/* Makes it a circle */
-background: linear-gradient(135deg, #e8c4f8, #b4e7eb); /* Purple gradient */
-background: linear-gradient(135deg, #eea0b7, #a1e1e6,#f1a8be); /* Purple gradient */
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds depth to the bubble */
-box-shadow: 4px 4px 12px rgba(26, 24, 24, 0.8);
-
-
-
-
-  }
 .heading .highlight {
-    /* Bright color for highlight */
-    font-weight: bold;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    /* border: 2px solid #af05c5; Adds a solid border */
-    padding: 5px 10px; /* Adds spacing around the text */
-    border-radius: 20px; /* Rounded edges for a modern look */
-   
+  font-weight: bold;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: rgb(249, 250, 250);
+  color: #0c0c0c;
+  box-shadow: 2px 2px 8px rgba(53, 57, 110, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.heading .highlight:hover {
+  background-color: #c6e0f5;
+  color: #0a0a0a;
+  box-shadow: 2px 2px 8px rgba(8, 8, 8, 0.5);
+}
+
+/* Subtext */
+.subtext {
+  font-size: 1.1em;
+  color: #444;
+
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 15px;
+  padding-top: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background: #4a90e2;
+  color: white;
+  border: 4px solid #546679; 
+}
+
+.btn-primary:hover {
+  background: #357abd;
+}
+
+.btn-secondary {
+  background: #4a90e2;
+  color: white;
+  border: 4px solid #546679; 
+}
+
+.btn-secondary:hover {
+  background: #357abd;
+}
+
+/* Image */
+.header-img {
+  width: 300px;
+  height: auto;
+  animation: float 2.5s ease-in-out infinite;
   
-    transition: all 0.3s ease-in-out;
-    background-color:rgb(67, 102, 119);
-    color: #fff; 
-    box-shadow: 6px 6px 12px rgba(168, 1, 118, 0.8);
+}
+/* Font Awesome Cap Icon */
+.cap-icon {
+  color: black;
+  font-size: 60px;
+  margin-right: 10px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  
-  .heading .highlight:hover {
-    background-color: #fff5e6;
-    color: #74068f;
-    box-shadow: 2px 2px 8px rgba(255, 87, 51, 0.5);
+  50% {
+    transform: translateY(-10px);
   }
+}
