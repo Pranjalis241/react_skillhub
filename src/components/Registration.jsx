@@ -1,79 +1,123 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import styles from './Registration.module.css';
 
-const Registration = () => {
-  const [formData, setFormData] = useState({ name: '', email: '' });
-  const [showTooltip, setShowTooltip] = useState(false); // State to control tooltip visibility
+class Registration extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      showTooltip: false,
+      nameError: '',
+      emailError: ''
+    };
+  }
 
-  //updates the respective state (name or email)
-  const handleChange = (e) => {
+  // Handle input changes
+  changeHandler = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    this.setState({
+      [name]: value
+    });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // Validate form fields
+  validateForm = () => {
+    let nameError = '';
+    let emailError = '';
 
-    // Check if name and email are filled
-    if (!formData.name || !formData.email) {
-      alert('Please fill in both name and email fields.');
-      return; // Prevent form submission if fields are empty
+    // Name validation (minimum 3 letters)
+    if (this.state.name.length < 3) {
+      nameError = 'Name must be at least 3 letters';
     }
 
-    // If both fields are filled, proceed with opening the GitHub page
-    window.open('https://github.com/copilot', '_blank');
-    //opens a new window or tab
+    // Email validation (must contain @)
+    if (!this.state.email.includes('@')) {
+      emailError = 'Email must contain @';
+    }
 
-    //window.location.href = 'https://github.com/copilot'; 
-    // Navigate to GitHub Copilot page in the same window
+    if (nameError || emailError) {
+      this.setState({ nameError, emailError });
+      return false;
+    }
 
-    // Function to show a small window with a message
-
+    return true;
   };
 
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Registration Form</h1>
-      <form onSubmit={handleSubmit} >
-        {/* when the form is submitted the handleSubmit function executed. */}
-        <div className={styles.inputGroup}>
-          <label htmlFor="name" className={styles.label}>Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-            className={styles.input}
-          />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor="email" className={styles.label}>Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Enter your email"
-            className={styles.input}
-          />
-        </div>
-        <div className={styles.buttonContainer}>
-          <button
-            type="submit"
-            className={styles.button}
-            onMouseOver={() => setShowTooltip(true)}  // Show tooltip on hover
-            onMouseOut={() => setShowTooltip(false)}   // Hide tooltip when mouse leaves
-          >
-            Submit
-          </button>
-          {showTooltip && <div className={styles.tooltip}>Click to submit the form</div>}
-        </div>
-      </form>
-    </div>
-  );
-};
+  // Handle form submission
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!this.validateForm()) {
+      return;
+    }
+
+    //  Clear form after successful submission
+    e.target.reset(); // ✔ Refresh the form 
+
+    // ✅ Reset state also
+    this.setState({
+      name: '',
+      email: '',
+      showTooltip: false,
+      nameError: '',
+      emailError: ''
+    });
+
+    alert('Form submitted successfully!');
+  };
+
+  render() {
+    const { name, email, nameError, emailError } = this.state;
+
+    return (
+      <div className={styles.container}>
+        <h1 className={styles.title}>Registration Form</h1>
+        <form onSubmit={this.handleSubmit}>
+          
+          {/* Name Field */}
+          <div className={styles.inputGroup}>
+            <label htmlFor="name" className={styles.label}>Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={this.changeHandler}
+              placeholder="Enter your name"
+              className={styles.input}
+            />
+            <div className={styles.error}>{nameError}</div>
+          </div>
+
+          {/* Email Field */}
+          <div className={styles.inputGroup}>
+            <label htmlFor="email" className={styles.label}>Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={this.changeHandler}
+              placeholder="Enter your email"
+              className={styles.input}
+            />
+            <div className={styles.error}>{emailError}</div>
+          </div>
+
+          {/* Submit Button */}
+          <div className={styles.buttonContainer}>
+            <button
+              type="submit"
+              className={styles.button}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
 
 export default Registration;

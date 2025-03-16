@@ -27,7 +27,7 @@ const NavigationBar = () => {
                             title={<span><i className="fa-solid fa-book me-2"></i> Courses</span>}
                             id="coursesDropdown"
                         >
-                            <NavDropdown.Item as={Link} to="/courses/web-development">Web Development</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/allcourses">All courses</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/courses/data-science">Data Science</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/courses/ai">Artificial Intelligence</NavDropdown.Item>
                         </NavDropdown>

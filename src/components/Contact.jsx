@@ -38,7 +38,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container py-5 contact-container">
+    <div style={{ minHeight: '60vh', padding: '1px', fontSize: '24px' }} className="container py-5 contact-container">
       <div className="row g-5">
         {/* Left Section */}
         <div className="col-md-6 left-section">
