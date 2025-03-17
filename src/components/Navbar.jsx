@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
+
 import './Navbar.css';
 
 const NavigationBar = () => {
@@ -14,7 +15,8 @@ const NavigationBar = () => {
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto">
+                    <Nav className="ms-auto align-items-center">  {/* Added align-items-center */}
+
                         <Nav.Link as={Link} to="/">
                             <i className="fa-solid fa-home me-2"></i> Home
                         </Nav.Link>
@@ -24,7 +26,7 @@ const NavigationBar = () => {
                         </Nav.Link>
                         {/* Dropdown Menu */}
                         <NavDropdown
-                            title={<span><i className="fa-solid fa-book me-2"></i> Courses</span>}
+                            title={<span><i className="fa-solid fa-book me-2"></i> AI Courses</span>}
                             id="coursesDropdown"
                         >
                             <NavDropdown.Item as={Link} to="/allcourses">All courses</NavDropdown.Item>
@@ -35,6 +37,19 @@ const NavigationBar = () => {
                         <Nav.Link as={Link} to="/contact">
                             <i className="fa-solid fa-envelope me-2"></i> Contact Us
                         </Nav.Link>
+
+                        {/* Sign Up & Login Buttons */}
+
+                        <div className="butn-group">
+                            <Nav.Link as={Link} to="/login">
+                                <button className="butn-primary">LOGIN</button>
+                            </Nav.Link>
+
+                            <Nav.Link as={Link} to="/signup">
+                                <button className="butn-secondary">SIGN UP</button>
+                            </Nav.Link>
+                        </div>
+
                     </Nav>
                 </Navbar.Collapse>
             </div>
