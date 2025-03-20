@@ -3,6 +3,7 @@ import Header from './Header';
 import './Home.css';
 import AboutUs from './Aboutus';
 import ColorfulBoxes from "./ColorfulBoxes";
+import Teachers from "./Teachers";
 
 const Home = () => {
     // Internal CSS styles
@@ -12,6 +13,7 @@ const Home = () => {
         card3: { backgroundColor: "rgb(220, 215, 221)", color: "black" }  // Red
 
     }
+
 
 
     return (
@@ -76,75 +78,23 @@ const Home = () => {
                         </div>
                     </div>
 
-
-                    <div className="container mt-5">
-                        <h2 className="text-center" style={{ fontWeight: "bold", textDecoration: "underline" }}>
-                            Our Teachers
-                        </h2>
-                        <div id="toppersCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/topper1.jpg" className="rounded-circle mx-auto mt-4"
-                                        alt="Topper"
-                                        width="250"
-                                        height="250" />
-                                    <h5 class="mt-2">Alice Johnson</h5>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/topper2.jpg" className="rounded-circle mx-auto mt-4"
-                                        alt="Topper"
-                                        width="230"
-                                        height="250" />
-                                    <h5 class="mt-2">Bob Smith</h5>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/topper3.jpg" className="rounded-circle mx-auto mt-4"
-                                        alt="Topper"
-                                        width="250"
-                                        height="250" />
-                                    <h5 class="mt-2">Charlie Brown</h5>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/topper1.jpg" className="rounded-circle mx-auto mt-4"
-                                        alt="Topper"
-                                        width="250"
-                                        height="250" />
-                                    <h5 class="mt-2">David Lee</h5>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/topper2.webp" className="rounded-circle mx-auto mt-4"
-                                        alt="Topper"
-                                        width="250"
-                                        height="250" />
-                                    <h5 class="mt-2">Emma Wilson</h5>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#toppersCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#toppersCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                    </div>
-
-
+                    <Teachers />
 
 
                     {/* Commonly Asked Questions - Accordion */}
                     <div className="my-5">
-                        <h3 className="text-center mb-4" style={{ fontWeight: 'bold', textDecoration: "underline" }}>Commonly Asked Questions</h3>
+                        <h3 className="text-center mb-4" style={{ fontWeight: 'bold', textDecoration: "underline"}}>Commonly Asked Questions</h3>
                         <div className="accordion" id="faqAccordion">
                             {/* Question 1 */}
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id="headingOne">
                                     <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" style={{ fontSize: '24px' }}>
-                                        What is Web Development?
+                                        What is Artificial Intelligence?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                     <div className="accordion-body">
-                                        Web Development is the process of creating websites and web applications using HTML, CSS, JavaScript, and frameworks like React.
+                                        Artificial Intelligence (AI) refers to the ability of computer systems to perform tasks that typically require human intelligence, such as learning, problem-solving, and decision-making.
                                     </div>
                                 </div>
                             </div>

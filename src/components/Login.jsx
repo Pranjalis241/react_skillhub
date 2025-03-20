@@ -13,20 +13,21 @@ const Login = () => {
     };
 
     return (
-        <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
-            <Row style={{ maxWidth: '1000px' }}>
+        <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '90vh',backgroundColor:'white' }}>
+            <Row >
                 {/* Left Side - Image */}
                 <Col md={6} className="d-flex align-items-center justify-content-center">
                     <img
                         src="/images/Pasted image.png" // Replace with your actual image URL
                         alt="Login Illustration"
                         className="img-fluid"
+                        style={{ maxWidth: "80%", height: "auto", marginTop: "-40px" }} // Adjust size and shift upward
                     />
                 </Col>
 
                 {/* Right Side - Login Form */}
                 <Col md={6}>
-                    <Card style={{ border: 'none' }}>
+                    <Card style={{ border: 'none'}}>
                       
                         <h3 className="text-center fw-bold" style={{ fontFamily: "'Comic Sans MS', cursive, sans-serif" }}>Login</h3>
 

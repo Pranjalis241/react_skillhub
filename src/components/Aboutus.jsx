@@ -12,8 +12,8 @@ const AboutUs = () => {
           </div>
            {/* Right Section: Text */}
           <div className="col-lg-7 col-md-12">
-            <h2 className="about-title">About Us</h2>
-           
+            {/* <h2 className="about-title">Our Mission</h2>
+            */}
             <p className="about-text">
               At <span className="purple-text">Skillhub</span>, we are dedicated to helping individuals harness the
               potential of artificial intelligence. Whether you're interested in

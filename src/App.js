@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Allcourses from './components/Allcourses';
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Gallery from './components/Gallery';
 function App() {
   return (
     <Router> 
@@ -19,6 +20,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/registration" element={<Registration />} />
+                <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/allcourses" element={<Allcourses />} />
                 <Route path="/signup" element={<Signup/>} />

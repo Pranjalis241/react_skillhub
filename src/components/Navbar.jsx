@@ -9,9 +9,23 @@ const NavigationBar = () => {
         // <Navbar expand="lg" style={{ background: 'linear-gradient(135deg,rgb(250, 235, 245),rgb(222, 242, 253),rgb(250, 235, 245),rgb(222, 242, 253))', fontWeight: "bold" }}>
         <Navbar expand="lg" style={{ background: 'linear-gradient(135deg,rgb(224, 228, 225),rgb(210, 216, 213)', fontWeight: "bold" }}>
             <div className="container">
-                <Navbar.Brand as={Link} to="/">
-                    <i className="fa-solid fa-graduation-cap me-2"></i> SkillHub
-                </Navbar.Brand>
+               
+          
+<Navbar.Brand 
+  as={Link} 
+  to="/" 
+  style={{ 
+    fontSize: "1.55rem", 
+    // background: "linear-gradient(135deg, white, white)",
+    // borderRadius: "50px", 
+    // padding: "10px 20px",
+    // display: "inline-block"
+  }}
+>
+  <i className="fa-solid fa-graduation-cap me-2"></i> SkillHub
+</Navbar.Brand>
+
+
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -24,6 +38,11 @@ const NavigationBar = () => {
                         <Nav.Link as={Link} to="/registration">
                             <i className="fa-solid fa-user-plus me-2"></i> Registration
                         </Nav.Link>
+
+                        <Nav.Link as={Link} to="/Gallery">
+                            <i className="fa-solid fa-user-plus me-2"></i> AI Gallery
+                        </Nav.Link>
+                        
                         {/* Dropdown Menu */}
                         <NavDropdown
                             title={<span><i className="fa-solid fa-book me-2"></i> AI Courses</span>}

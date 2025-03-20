@@ -52,7 +52,7 @@
 .btn-group {
   display: flex;
   gap: 15px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .btn-primary,
