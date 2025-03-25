@@ -27,9 +27,35 @@ const Home = () => {
                 <div className="container mt-4">
 
 
-                    <h2 className="text-center fw-bold my-4" style={{ textDecoration: "underline" }}>
+                    {/* <h2 className="text-center fw-bold my-4" style={{ textDecoration: "underline" }}>
                         Most Searched Courses
-                    </h2>
+                    </h2> */}
+
+
+
+                    <div style={{ display: "flex", justifyContent: "center" ,padding: "20px"}}>
+                            <div style={{
+                                background: "linear-gradient(135deg, #e9d5ff, #d8b4fe)", // Soft lavender gradient
+                                borderRadius: "80px",
+                                padding: "20px",
+                                textAlign: "center",
+                                width: "300px"
+                            }}>
+                                <h2
+                                    className="text-center fw-bold"
+                                    style={{
+                                        fontFamily: "'Poppins', sans-serif",
+                                        color: "#222",
+                                        margin: "0",
+                                        fontSize:"21px",
+                                     
+                                    }}
+                                >
+                                   Most Searched Courses
+                                </h2>
+                              
+                            </div>
+                        </div>
 
 
                     <div className="row" style={{ fontFamily: "'Lora', serif" }}>
@@ -83,7 +109,32 @@ const Home = () => {
 
                     {/* Commonly Asked Questions - Accordion */}
                     <div className="my-5">
-                        <h3 className="text-center mb-4" style={{ fontWeight: 'bold', textDecoration: "underline"}}>Commonly Asked Questions</h3>
+                        {/* <h3 className="text-center mb-4">Commonly Asked Questions</h3> */}
+
+                        <div style={{ display: "flex", justifyContent: "center", padding: "20px" }}>
+                            <div style={{
+                                background: "linear-gradient(135deg, #e9d5ff, #d8b4fe)", // Soft lavender gradient
+                                borderRadius: "80px",
+                                padding: "20px",
+                                textAlign: "center",
+                                width: "300px"
+                            }}>
+                                <h2
+                                    className="text-center fw-bold"
+                                    style={{
+                                        fontFamily: "'Poppins', sans-serif",
+                                        color: "#222",
+                                        margin: "0",
+                                        fontSize:"18px",
+                                     
+                                    }}
+                                >
+                                    Commonly Asked Questions
+                                </h2>
+                              
+                            </div>
+                        </div>
+
                         <div className="accordion" id="faqAccordion">
                             {/* Question 1 */}
                             <div className="accordion-item">

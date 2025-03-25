@@ -17,9 +17,37 @@ const Teachers = () => {
 
     return (
         <div className="container mt-5">
-            <h2 className="text-center fw-bold" style={{ textDecoration: "underline"}}>
+            {/* <h2 className="text-center fw-bold" style={{ textDecoration: "underline"}}>
                 Our Teachers
-            </h2>
+            </h2> */}
+           
+
+            <div style={{ display: "flex", justifyContent: "center" }}>
+  <div style={{ 
+    //  background: "linear-gradient(135deg, #fceabb, #f8b500)", // Light yellow-orange gradient
+     background: "linear-gradient(135deg, #e9d5ff, #d8b4fe)",
+    borderRadius: "80px",
+    padding: "20px", 
+    textAlign: "center", // Center the text inside the div
+    width: "300px" // Set a fixed width
+  }}>
+    <h2 
+      className="text-center fw-bold" 
+      style={{ 
+        fontFamily: "'Poppins', sans-serif",
+        color: "#222",
+        margin: "0",
+        fontSize:"25px" 
+      }}
+    >
+      Our Teachers
+    </h2>
+  </div>
+</div>
+
+
+
+
             <div id="toppersCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
                 <div className="carousel-inner">
                     <div className="carousel-item active">

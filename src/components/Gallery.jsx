@@ -28,7 +28,7 @@ export default function Gallery() {
   
         {/* Main Image Carousel */}
         <div id="galleryCarousel" className="carousel slide d-flex justify-content-center">
-          <div className="carousel-inner" style={{ maxWidth: "600px" }}>
+          <div className="carousel-inner1" style={{ maxWidth: "600px" }}>
             {images.map((image, index) => (
               <div key={index} className={`carousel-item ${index === activeIndex ? "active" : ""}`}>
                 <img src={image.src} className="d-block w-100 rounded shadow-lg" style={{ height: "350px", objectFit: "cover" }} alt={image.alt} />
@@ -38,10 +38,10 @@ export default function Gallery() {
   
           {/* Controls */}
           <button className="carousel-control-prev" type="button" onClick={() => setActiveIndex((activeIndex - 1 + images.length) % images.length)}>
-            <span className="carousel-control-prev-icon"></span>
+            <span className="carousel-control-prev-icon1"></span>
           </button>
           <button className="carousel-control-next" type="button" onClick={() => setActiveIndex((activeIndex + 1) % images.length)}>
-            <span className="carousel-control-next-icon"></span>
+            <span className="carousel-control-next-icon1"></span>
           </button>
         </div>
   

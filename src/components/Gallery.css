@@ -1,4 +1,4 @@
-/* 
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 
@@ -30,23 +30,23 @@ body, html {
   }
   
   
-  .carousel-inner {
+  .carousel-inner1 {
     border-radius: 10px;
     overflow: hidden;
   }
-  .carousel img {
+  /* .carousel img{
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
-  }
+  } */
   
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
+  /* .carousel-control-prev-icon1,
+  .carousel-control-next-icon1 {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
   }
   
-  
+   */
   .thumbnail {
     cursor: pointer;
     height: 70px;
@@ -56,8 +56,6 @@ body, html {
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0.6;
     max-width: 100%;
-    
-  
   }
   
   .thumbnail:hover {
@@ -70,16 +68,11 @@ body, html {
     opacity: 1;
     transform: scale(1.1);
   }
-  
+/*   
 .row {
   max-width: 100%;
   flex-wrap: nowrap;
   overflow-x: auto;
   justify-content: center;
-}
+}  */
 
-.carousel {
-  width: 100%;
-  max-width: 800px; 
-  margin: auto;
-} */
